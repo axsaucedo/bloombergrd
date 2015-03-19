@@ -1,29 +1,5 @@
 $(document).ready(function(){
 
-// on scroll, check the height and adjust navbar
-// opacity as needed
-window.onscroll = function () {
-  var scrollPos = $(document).scrollTop();
-  var threshold = $("section.aboutSection").outerHeight();
-
-  var opacity;
-  if (threshold - scrollPos < 0)
-    opacity = "0.8";
-  else
-    opacity = "0";
-
-  var bgString = "rgba(0,0,0," + opacity + ")"
-  $("section.nav").css("background", bgString);
-};
-
-// set the nav scroll bindings
-$("a#nav-faq").click( function () {
-  scrollTo("section.faqSection");
-});
-$("a#nav-sponsors").click( function () {
-  scrollTo("section.sponsorsSection");
-});
-
 // particles js
 
 // calculate a ratio to be used in particle count, distance to 

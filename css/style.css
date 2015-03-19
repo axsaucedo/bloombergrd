@@ -1,7 +1,9 @@
 @import url(http://www.markmurray.co/codepen/entypostyle.css);
-* {
-  padding: 0;
-  margin: 0; }
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(fonts/ubuntu.ttf);
+}
 
 ::selection {
   background: #001; }
@@ -42,11 +44,9 @@ h1.general {
   width: 100%;
   padding-bottom: 100px;
   padding-top: 100px; }
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto; }
+ul {
+  padding-right: 50px;
+}
 
 .aboutSection {
   padding-top: 80px;
@@ -115,18 +115,6 @@ h1.general {
 
 
 .faqSection {
-  /* webkit */
-  /*
-  background-image: -webkit-gradient(
-    linear, left top, left bottom, from(rgba(13,13,13,0.0)),
-    to(rgba(238,238,238,0.2))
-  );*/
-  /* mozilla */
-  /*
-  background-image: -moz-linear-gradient(
-    rgba(13, 13, 13, 0.0) 0%, rgba(238, 238, 238, 0.2) 95%
-  );
-*/
   background: #eee;
   color: #111;
   width: 80%;
@@ -134,33 +122,6 @@ h1.general {
   background: url('../img/1.png') center center;
   background-color: white;
   background-size: cover; }
-  .faqSection .row {
-    width: 80%;
-    margin: auto; }
-  .faqSection .col {
-    margin-top: 40px;
-    width: 33.3%;
-    float: left; }
-  .faqSection .col p {
-    text-align: left;
-    margin: auto; }
-    .faqSection .col p a:hover {
-      color: gray; }
-  .faqSection .col h2 {
-    font-size: 22px;
-    font-weight: 600;
-    width: 80%;
-    margin: auto; }
-  .faqSection .col h2:after {
-    content: "";
-    position: relative;
-    top: 0;
-    left: 0;
-    margin: 10px 0px;
-    height: 2px;
-    width: 50%;
-    display: block;
-    background: #111; }
 
 .contactSection {
   color: #fff;
@@ -196,66 +157,11 @@ h1.general {
     background: #983b3b;
     border-radius: 40px; }
 
-.sponsorsSection {
-  background: #eee;
-  color: #111; }
-  .sponsorsSection .container {
-    max-width: 960px; }
-  .sponsorsSection h1 {
-    padding-bottom: 20px; }
-  .sponsorsSection h2 {
-    padding: 20px 0px;
-    text-align: center; }
-  .sponsorsSection p {
-    font-family: Ubuntu; }
-  .sponsorsSection .sponsors-container {
-    padding: 0px 0px;
-    text-align: center; }
-  .sponsorsSection .sponsors-container > a > img {
-    display: inline-block;
-    max-width: 100%;
-    padding: 20px 20px 20px 0px; }
-  .sponsorsSection .partner > a > img {
-    max-height: 200px; }
-  .sponsorsSection .platinum > a > img {
-    max-height: 90px; }
-  .sponsorsSection .gold > a > img {
-    max-height: 70px; }
-  .sponsorsSection .silver > a > img {
-    max-height: 55px; }
-  .sponsorsSection .bronze > a > img {
-    max-height: 40px; }
-  .sponsorsSection .by > a > img {
-    max-height: 30px; }
-
-.nav {
-  background: rgba(0, 0, 0, 0);
-  top: 0px;
-  padding: 10px 20px;
-  color: #fff;
-  z-index: 999;
-  margin-bottom: -50px;
-  /* background opacity transition */
-  -webkit-transition: background 0.3s ease-out;
-  -moz-transition: background 0.3s ease-out;
-  -o-transition: background 0.3s ease-out;
-  transition: background 0.3s ease-out; }
-  .nav .links {
-    text-align: right; }
-  .nav a {
-    padding: 10px 20px;
-    cursor: pointer;
-    position: relative;
-    top: 0px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
-  .nav a:hover {
-    top: 5px; }
 
 p {
-  width: 80%; }
+  width: 90%;
+  margin: auto auto; 
+}
 
 .clear {
   clear: both; }
@@ -269,230 +175,6 @@ p {
   top: 0;
   left: 0; }
 
-/* Sponsors */
-.sponsors-container div figure {
-  width: 100%;
-  height: 110px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center; }
-
-.sponsors-container div {
-  margin-bottom: 20px !important; }
-
-.platinum div {
-  width: 40%;
-  margin: auto;
-  display: inline-block; }
-
-.gold div {
-  width: 25%;
-  margin: auto;
-  display: inline-block;
-  margin-right: 20px; }
-
-.gold div figure {
-  height: 100px; }
-
-.silver div {
-  width: 20%;
-  margin: auto;
-  display: inline-block;
-  margin-right: 20px; }
-
-.silver div figure {
-  height: 80px; }
-
-.bronze div {
-  width: 13%;
-  margin: auto;
-  display: inline-block;
-  margin-right: 20px; }
-
-.bronze div figure {
-  height: 70px; }
-
-figure.moxtra {
-  background: url('https://s3-us-west-1.amazonaws.com/2015sponsors/moxtra.png'); }
-
-figure.cornerstone {
-  background: url('https://s3-us-west-1.amazonaws.com/2015sponsors/cornerstone.png'); }
-
-figure.gapinc {
-  background: url('../img/gaptech.png'); }
-
-figure.tcs {
-  background: url('../img/tcs.png'); }
-
-figure.namecheap {
-  background: url('../img/namecheap.png'); }
-
-figure.thiel {
-  background: url('../img/thiel.png'); }
-
-figure.mashery {
-  background: url('../img/intel.png'); }
-
-figure.blp {
-  background: url('../img/blp.png'); }
-
-figure.smartThings {
-  background: url('https://s3-us-west-1.amazonaws.com/2015sponsors/smartthings.png'); }
-
-figure.heywatch {
-  background: url('https://s3-us-west-1.amazonaws.com/2015sponsors/HeyWatch.png'); }
-
-figure.thalmic {
-  background: url('https://s3-us-west-1.amazonaws.com/2015sponsors/thalmic.png'); }
-
-figure.wolfram {
-  background: url('../img/wolframalpha.png'); }
-
-figure.microsoft {
-  background: url('../img/microsoft.png'); }
-
-figure.pia {
-  background: url('../img/pia.png'); }
-
-figure.teespring {
-  background: url('../img/teespring.png'); }
-
-figure.directv {
-  background: url('../img/directv.png'); }
-
-figure.linode {
-  background: url('../img/linode.png'); }
-
-figure.mashape {
-  background: url('../img/mashape.png'); }
-
-figure.contextio {
-  background: url('../img/contextio.png'); }
-
-figure.aws {
-  background: url('../img/aws.png'); }
-
-figure.ibm {
-  background: url('../img/ibm.png'); }
-
-figure.nest {
-  background: url('../img/nest.png'); }
-
-/*
-figure.{
-	background: url('');
-}
-*/
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .faqSection .row {
-    width: 80%;
-    clear: both;
-    margin: auto; }
-  .faqSection .col {
-    width: 50%;
-    float: left;
-    margin-top: 40px; }
-    .faqSection .col p {
-      text-align: left;
-      width: 80%; }
- }
-
-@media only screen and (max-width: 768px) {
-  .aboutSection {
-    background-size: auto 100%; }
-
-  .faqSection .row {
-    width: 80%;
-    clear: both;
-    margin: auto; }
-  .faqSection .col {
-    width: 100%;
-    float: none;
-    margin-top: 40px; }
-    .faqSection .col p {
-      text-align: left;
-      width: 100%; }
-    .faqSection .col h2 {
-      width: 100%; }
-
-  .sponsors-container div figure {
-    width: 100%;
-    height: 80px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; }
-
-  .sponsors-container div {
-    width: 100%;
-    height: 80px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; }
-
-  .platinum div {
-    width: 80%;
-    margin: auto;
-    display: inline-block; }
-
-  .gold div {
-    width: 30%;
-    margin: auto;
-    display: inline-block;
-    margin-right: 20px; }
-
-  .gold div figure {
-    height: 60px; }
-
-  .silver div {
-    width: 30%;
-    margin: auto;
-    display: inline-block;
-    margin-right: 20px; }
-
-  .silver div figure {
-    height: 50px; }
-
-  .bronze div {
-    width: 30%;
-    margin: auto;
-    display: inline-block;
-    margin-right: 20px; }
-
-  .bronze div figure {
-    height: 40px; }
- }
-
-@media only screen and (max-width: 460px) {
-  h1.special {
-    font-size: 3em; }
-
-  .nav {
-    text-align: center;
-    padding: 10px 0px; }
-    .nav .home {
-      display: none; }
-    .nav .links {
-      text-align: center;
-      font-size: 12px; }
-    .nav a {
-      padding: 10px 10px; }
-
-  .aboutSection {
-    min-height: 100%; }
-    .aboutSection .logo .image {
-      width: 100%;
-      text-align: center; }
-    .aboutSection .logo img {
-      position: relative;
-      display: inline-block;
-      width: 80%;
-      max-width: 200px;
-      margin-top: auto; }
-
-  .sponsorsSection .by > a > img {
-    max-height: auto;
-    max-width: 80%; }
- }
 
 
 @media only screen and (min-width: 1300px) {
