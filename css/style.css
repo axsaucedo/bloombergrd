@@ -115,6 +115,9 @@ ul {
 
 
 .faqSection {
+  -webkit-box-shadow:0 0 50px white; 
+  -moz-box-shadow: 0 0 50px white; 
+  box-shadow:0 0 50px white;
   background: #eee;
   color: #111;
   width: 80%;
@@ -179,7 +182,8 @@ p {
 
 @media only screen and (min-width: 1300px) {
   .faqSection {
-    width: 70%;
+    width: 100%;
+    max-width: 1100px;
   }
 }
 
