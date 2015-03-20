@@ -115,9 +115,9 @@ ul {
 
 
 .faqSection {
-  -webkit-box-shadow:0 0 50px white; 
-  -moz-box-shadow: 0 0 50px white; 
-  box-shadow:0 0 50px white;
+  -webkit-box-shadow:0 0 30px white; 
+  -moz-box-shadow: 0 0 30px white; 
+  box-shadow:0 0 30px white;
   background: #eee;
   color: #111;
   width: 80%;
